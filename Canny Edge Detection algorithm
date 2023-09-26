@@ -1,0 +1,40 @@
+import cv2 as cv
+import numpy as np
+from matplotlib import pyplot as plt
+
+
+image = cv.imread('LBSNAA-1.jpg',255)
+
+def hist(histimg):
+    ycrcb = cv.cvtColor(histimg, cv.COLOR_RGB2YCR_CB)
+    channels = cv.split(ycrcb)
+    cv.equalizeHist(channels[0], channels[0])
+    cv.merge(channels, ycrcb)
+    histimg = cv.cvtColor(ycrcb, cv.COLOR_YCR_CB2RGB)
+    return histimg
+
+dehazing = hist(image)
+
+edges = cv.Canny(dehazing,30,100)
+
+plt.subplot(121),plt.imshow(dehazing,cmap = 'gray')
+plt.title('Original Image'), plt.xticks([]), plt.yticks([])
+plt.subplot(122),plt.imshow(edges,cmap = 'gray')
+plt.title('Edge Image'), plt.xticks([]), plt.yticks([])
+
+
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
