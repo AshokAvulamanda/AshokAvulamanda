@@ -1,6 +1,10 @@
 - Hi , I am @Ashok Avulamanda 
-- I am intrested in working in coding👀
-- 🌱 I’m currently learning ...
-- 💞️ I like to work with in a team
-- 📫 How to reach me -aashok9130@gmail.com
+- projects
+- 1. data structres tree data type
+  2. library creation by using python
+  3. linked list algorithm
+  4. adge detection
+  5. image processing
+  6. aduio processing
+     
 
